@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack Pro</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+    <div class="container">
+        <!-- BMI Calculator -->
+        <section class="bmi-calculator">
+            <h2>BMI Calculator</h2>
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <input type="number" id="height" placeholder="Height (cm)">
+            <button onclick="calculateBMI()">Calculate</button>
+            <div id="bmi-result"></div>
+        </section>
+
+        <!-- Workout Logger -->
+        <section class="workout-log">
+            <h2>Log Workout</h2>
+            <select id="workout-type">
+                <option value="cardio">Cardio</option>
+                <option value="strength">Strength</option>
+                <option value="flexibility">Flexibility</option>
+            </select>
+            <input type="number" id="duration" placeholder="Duration (minutes)">
+            <button onclick="logWorkout()">Add Workout</button>
+            <div id="workout-list"></div>
+        </section>
+
+        <!-- Progress Charts -->
+        <section class="progress-chart">
+            <h2>Weekly Progress</h2>
+            <canvas id="progressChart"></canvas>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
